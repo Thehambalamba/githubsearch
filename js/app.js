@@ -1,5 +1,8 @@
-// Instance the class
+// Instance the GitHub class
 const github = new GitHub;
+
+// Instance the UI class
+const ui = new UI;
 
 // Input
 const searchUser = document.getElementById('searchUser');
@@ -14,7 +17,7 @@ searchUser.addEventListener('keyup', (e) => {
                 if (data.profile.message === 'Not Found') {
                     
                 } else {
-                    
+                    ui.showProfile(data.profile);
                 }
             })
     } else {
